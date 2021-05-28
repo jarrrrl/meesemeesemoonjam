@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
     private static float bulletVelocity = 5f;
 
     public static float BulletVelocity
@@ -37,7 +38,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-     private static void ShootGun()
+     public void ShootGun()
     {
         GameObject bulletInstance = Instantiate(bulletObject, firePoint.position, firePoint.rotation);
         bulletPhysics = bulletInstance.GetComponent<Rigidbody2D>();

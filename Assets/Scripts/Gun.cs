@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+
+    public Bullet bulletInstances;
     private static int ammoCount;
     private static float fireSpeed;
 
     private bool canFire = true;
+
 
  
 
@@ -49,13 +52,13 @@ public class Gun : MonoBehaviour
      * Checks if the gun is able to fire, calls the bulletscript to create a bullet instantiation
      * if canFire is true
      */
-    public static void IsCanFire()
+    public void IsCanFire()
     {
         if (!canFire)
         {
             return;
         }
-        Bullet.ShootGun();
+        bulletInstances.ShootGun();
         StartCoroutine(FireSpeedTimer());
     }
 

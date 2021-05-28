@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    public Gun playerGun;
+
     private static float moveSpeed = 5f;
 
     public static float MoveSpeed
@@ -39,7 +42,7 @@ public class Player : MonoBehaviour
      */
     public void PlayerFireInput()
     {
-        Gun.
+        playerGun.IsCanFire();
     }
     
 }
