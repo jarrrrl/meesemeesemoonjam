@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
         set => moveSpeed = value;
     }
 
-    private bool canFire = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +22,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            if (!canFire)
-            {
-                return;
-            }
-            ShootGun();
-            StartCoroutine(Reload());
+            PlayerFireInput();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,22 +32,14 @@ public class Player : MonoBehaviour
             // gameover here
         }
     }
+
+
     /**
-     * Counter for the time between shots fired, so that you can't just spam click / fire
-     * super fast
+     * Player pressed the input for firing the gun, calls the gun's fire method
      */
-    private IEnumerator FireSpeedTimer()
+    public void PlayerFireInput()
     {
-        canFire = false;
-
-        yield return new WaitForSeconds(Gun.FireSpeed);
-
-        canFire = true;
-    }
-
-    public static void ShootGun
-    {
-
+        Gun.
     }
     
 }
