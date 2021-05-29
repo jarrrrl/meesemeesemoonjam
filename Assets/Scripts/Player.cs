@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     private bool canFire = true;
 
+
     private static float moveSpeed = 25f;
 
     public static float MoveSpeed
@@ -16,12 +17,6 @@ public class Player : MonoBehaviour
         get => moveSpeed;
         set => moveSpeed = value;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.eulerAngles = Vector3.up * 1;
+            transform.eulerAngles = Vector3.up;
         }
     }
 }
