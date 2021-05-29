@@ -6,9 +6,9 @@ public class Gun : MonoBehaviour
 {
     public Transform firePoint; //where the bullet is fired from
     public GameObject bulletPrefab;
+    public GameObject gunObject;
     private static int ammoCount;
     private static float fireSpeed = 2f;
-
 
     public static int AmmoCount
     {
@@ -29,7 +29,6 @@ public class Gun : MonoBehaviour
 
     public void ShootGun()
     {
-
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

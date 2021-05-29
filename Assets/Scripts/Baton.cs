@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Baton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject playerIdleBaton;
+    public GameObject playerUsedBaton;
+    private static float batonCooldown = 0.5f;
+    private static float batonUseTime = 0.5f;
+    public static float BatonCooldown
     {
-        
+        get => batonCooldown;
+        set => batonCooldown = value;
     }
 
-    // Update is called once per frame
-    void Update()
+    /*
+    * deploys shield from a "firepoint", a location on the playercharacter
+    */
+    public void DeployBaton()
     {
-        
+        playerIdleBaton.SetActive(false);
+        playerUsedBaton.SetActive(true);
+        StartCoroutine(BatonUseTimer());
+    }
+
+    private IEnumerator BatonUseTimer()
+    {
+        yield return new WaitForSeconds(Baton.batonUseTime);
+
+        playerIdleBaton.SetActive(true);
+        playerUsedBaton.SetActive(false);
     }
 }

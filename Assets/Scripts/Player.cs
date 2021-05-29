@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // ** sprites
+    public Sprite idleSprite;
+    public Sprite gunSprite;
+    public Sprite normalSprite;
 
-    public Gun playerGun;
+    //
+
+    // **weapons
+    public PlayerGun playerGun;
     public RiotShield playerShield;
+    public Baton playerBaton;
 
     private bool canFire = true;
     private bool canShield = true;
-
+    private bool canBaton = true;
+    //
+    public GameObject playerShadow;
+    public GameObject playerCollideBox;
+    // ** player variables
     private static float moveSpeed = 25f;
 
     public static float MoveSpeed
@@ -18,16 +30,26 @@ public class Player : MonoBehaviour
         get => moveSpeed;
         set => moveSpeed = value;
     }
+
+
+    //
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && (canShield))
+        if (Input.GetButton("Fire1") && canShield && !Input.GetKey(KeyCode.E))
         {
             PlayerFireInput();
         }
-        else if (Input.GetButton("Fire2") && (!Input.GetButton("Fire1")))
+        else if (Input.GetButton("Fire2") && (!Input.GetButton("Fire1")) &&
+            !Input.GetKey(KeyCode.E))
         {
             PlayerShieldInput();
+        }
+        else if (Input.GetKey(KeyCode.E) && (!Input.GetButton("Fire1")) && canShield
+            && canFire)
+        {
+            PlayerBatonInput();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -48,6 +70,9 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        this.GetComponent<SpriteRenderer>().sprite = gunSprite;
+        playerBaton.transform.gameObject.SetActive(false);
+
         playerGun.ShootGun();
         StartCoroutine(FireSpeedTimer());
     }
@@ -58,8 +83,22 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        playerGun.transform.gameObject.SetActive(false);
+        this.GetComponent<SpriteRenderer>().sprite = normalSprite;
+        playerBaton.transform.gameObject.SetActive(false);
         playerShield.DeployShield();
-        StartCoroutine(ShieldSpeedTimer());
+        StartCoroutine(ShieldCooldownTimer());
+    }
+    public void PlayerBatonInput()
+    {
+        if (!canBaton)
+        {
+            return;
+        }
+        playerGun.transform.gameObject.SetActive(false);
+        this.GetComponent<SpriteRenderer>().sprite = gunSprite;
+        playerBaton.DeployBaton();
+        StartCoroutine(BatonCooldownTimer());
     }
 
     /**
@@ -71,15 +110,29 @@ public class Player : MonoBehaviour
         canFire = false;
 
         yield return new WaitForSeconds(Gun.FireSpeed);
+        playerBaton.transform.gameObject.SetActive(true);
+        this.GetComponent<SpriteRenderer>().sprite = normalSprite;
+
 
         canFire = true;
     }
-    private IEnumerator ShieldSpeedTimer()
+    private IEnumerator ShieldCooldownTimer()
     {
         canShield = false;
 
         yield return new WaitForSeconds(RiotShield.ShieldCooldown);
+        playerBaton.transform.gameObject.SetActive(true);
+
 
         canShield = true;
     }
+    private IEnumerator BatonCooldownTimer()
+    {
+        canBaton = false;
+
+        yield return new WaitForSeconds(Baton.BatonCooldown);
+        this.GetComponent<SpriteRenderer>().sprite = normalSprite;
+        canBaton = true;
+    }
+
 }
