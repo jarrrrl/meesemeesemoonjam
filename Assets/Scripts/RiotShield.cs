@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class RiotShield : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject riotShield;
+    private static float shieldCooldown = 3.5f;
+    private static float shieldUseTime = 3f;
+    public static float ShieldCooldown
     {
-        
+        get => shieldCooldown;
+        set => shieldCooldown = value;
     }
 
-    // Update is called once per frame
-    void Update()
+    /*
+    * deploys shield from a "firepoint", a location on the playercharacter
+    */
+    public void DeployShield()
     {
-        
+        riotShield.SetActive(true);
+        StartCoroutine(ShieldUseTimer());
+    }
+
+    private IEnumerator ShieldUseTimer()
+    {
+        yield return new WaitForSeconds(RiotShield.shieldUseTime);
+
+        riotShield.SetActive(false);
     }
 }

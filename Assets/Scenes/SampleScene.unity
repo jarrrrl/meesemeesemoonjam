@@ -213,6 +213,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463274496847612362, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595488917573144929, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816147742016967973, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3114928761315936403, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter

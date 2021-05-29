@@ -28,6 +28,10 @@ public class Bullet : MonoBehaviour
      */
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Shield"))
+        {
+            return;
+        }
         GameObject hitEffectInstance = Instantiate(bulletHitEffect, transform.position, 
             Quaternion.identity);
         Destroy(bulletHitEffect, 5f);

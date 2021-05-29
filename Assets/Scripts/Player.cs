@@ -6,9 +6,10 @@ public class Player : MonoBehaviour
 {
 
     public Gun playerGun;
+    public RiotShield playerShield;
 
     private bool canFire = true;
-
+    private bool canShield = true;
 
     private static float moveSpeed = 25f;
 
@@ -20,9 +21,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && (canShield))
         {
             PlayerFireInput();
+        }
+        else if (Input.GetButton("Fire2") && (!Input.GetButton("Fire1")))
+        {
+            PlayerShieldInput();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,6 +52,16 @@ public class Player : MonoBehaviour
         StartCoroutine(FireSpeedTimer());
     }
 
+    public void PlayerShieldInput()
+    {
+        if (!canShield)
+        {
+            return;
+        }
+        playerShield.DeployShield();
+        StartCoroutine(ShieldSpeedTimer());
+    }
+
     /**
      * Counter for the time between shots fired, so that you can't just spam click / fire
      * super fast
@@ -58,5 +73,13 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(Gun.FireSpeed);
 
         canFire = true;
+    }
+    private IEnumerator ShieldSpeedTimer()
+    {
+        canShield = false;
+
+        yield return new WaitForSeconds(RiotShield.ShieldCooldown);
+
+        canShield = true;
     }
 }
