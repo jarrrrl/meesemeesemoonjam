@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8211745074706463817}
   - component: {fileID: -5052621613778969400}
+  - component: {fileID: -5479586922543548276}
+  - component: {fileID: 8716011762625571234}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 143653144235568602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2993, y: -0.2993, z: 0}
-  m_LocalScale: {x: 3.9926, y: 3.9926, z: 3.9926}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 3a4555d69ed1fa548a03f55970b957df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,3 +84,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5479586922543548276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143653144235568602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25233fee3e7fae748ba617d49d5275c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletHitEffect: {fileID: 0}
+  rb: {fileID: 8716011762625571234}
+--- !u!50 &8716011762625571234
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143653144235568602}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

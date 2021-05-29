@@ -5,11 +5,12 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
 
-    public Bullet bulletInstances;
+    public GameObject bulletPrefab;
     private static int ammoCount;
-    private static float fireSpeed;
+    private static float fireSpeed = 2f;
+    public Transform firePoint; //where the bullet is fired from
+    public Transform playerTransform; // the player's location
 
-    private bool canFire = true;
 
 
  
@@ -36,31 +37,17 @@ public class Gun : MonoBehaviour
     {
         
     }
-    /**
-     * Counter for the time between shots fired, so that you can't just spam click / fire
-     * super fast
-     */
-    private IEnumerator FireSpeedTimer()
-    {
-        canFire = false;
 
-        yield return new WaitForSeconds(Gun.FireSpeed);
-
-        canFire = true;
-    }
     /*
      * Checks if the gun is able to fire, calls the bulletscript to create a bullet instantiation
      * if canFire is true
      */
-    public void IsCanFire()
-    {
-        if (!canFire)
-        {
-            return;
-        }
-        bulletInstances.ShootGun();
-        StartCoroutine(FireSpeedTimer());
-    }
 
+    public void ShootGun()
+    {
+        Debug.Log(playerTransform.position);
+        firePoint.position = firePoint.position + playerTransform.position;
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
 }
 

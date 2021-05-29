@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
 
     public Gun playerGun;
 
-    private static float moveSpeed = 5f;
+    private bool canFire = true;
+
+    private static float moveSpeed = 25f;
 
     public static float MoveSpeed
     {
@@ -42,7 +44,24 @@ public class Player : MonoBehaviour
      */
     public void PlayerFireInput()
     {
-        playerGun.IsCanFire();
+        if (!canFire)
+        {
+            return;
+        }
+        playerGun.ShootGun();
+        StartCoroutine(FireSpeedTimer());
     }
-    
+
+    /**
+     * Counter for the time between shots fired, so that you can't just spam click / fire
+     * super fast
+     */
+    private IEnumerator FireSpeedTimer()
+    {
+        canFire = false;
+
+        yield return new WaitForSeconds(Gun.FireSpeed);
+
+        canFire = true;
+    }
 }

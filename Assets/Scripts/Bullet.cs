@@ -5,8 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    private static float bulletVelocity = 5f;
-
+    private static float bulletVelocity = 20f;
     public static float BulletVelocity
     {
         get => bulletVelocity;
@@ -16,15 +15,12 @@ public class Bullet : MonoBehaviour
     public GameObject bulletHitEffect; //the sprite of when a bullet hits
 
 
-    private Rigidbody2D bulletPhysics; //2d collider box physics container
-    public GameObject bulletObject; //entire object of bullet
-    public Transform firePoint; //where the bullet is fired from
-    private Vector2 currentBulletVelocity;
+    public Rigidbody2D rb; //2d collider box physics container
 
     // Start is called before the first frame update
     void Start()
     {
-        bulletPhysics = GetComponent<Rigidbody2D>();
+        rb.velocity = transform.right * BulletVelocity;
     }
     /**
      * Whenever a bullet hits an object, it will create a hit effect, destroy the bullet, then
@@ -36,14 +32,5 @@ public class Bullet : MonoBehaviour
             Quaternion.identity);
         Destroy(bulletHitEffect, 5f);
         Destroy(gameObject);
-    }
-
-     public void ShootGun()
-    {
-        GameObject bulletInstance = Instantiate(bulletObject, firePoint.position, firePoint.rotation);
-        bulletPhysics = bulletInstance.GetComponent<Rigidbody2D>();
-
-        bulletPhysics.AddForce(firePoint.up * BulletVelocity, ForceMode2D.Impulse);
-        currentBulletVelocity = bulletPhysics.velocity;
     }
 }
