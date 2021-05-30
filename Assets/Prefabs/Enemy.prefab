@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGun: {fileID: 4731663731645481798}
+  enemyFist: {fileID: 8616950076293240568}
   idleSprite: {fileID: 21300000, guid: 04097ffec1c9e324f9c86f1e50f7dac3, type: 3}
   gunSprite: {fileID: 21300000, guid: 7f05f5115393cce49bef3647feb8340d, type: 3}
   enemyObject: {fileID: 793404034609525287}
@@ -417,6 +418,7 @@ MonoBehaviour:
   regionBelongTo: {fileID: 0}
   playerBoundsTop: {fileID: 0}
   playerBoundsBottom: {fileID: 0}
+  hitEffect: {fileID: 4318046876585605126, guid: a204b5b72377313418e5734171f0e7eb, type: 3}
   moveSpeed: 5
 --- !u!60 &7661888183866004375
 PolygonCollider2D:
@@ -449,6 +451,22 @@ PolygonCollider2D:
       - {x: 0.08, y: -0.06}
       - {x: 0.08, y: 0.07}
       - {x: 0.055, y: 0.08}
+--- !u!114 &8616950076293240568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7198670198831958936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce55a017eb3a0b84b8558bf9f80dc0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireSpeed: 6
+  fistDamage: 1
+  fistUseTimer: 2
+  fistHitbox: {fileID: 7198670198831958936}
 --- !u!1001 &517252454105988307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -525,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3591088054508904254, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3591088054508904254, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_LocalScale.y
@@ -533,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3591088054508904254, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.25
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 3591088054508904254, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -570,6 +588,10 @@ PrefabInstance:
     - target: {fileID: 6002536871462157713, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002536871462157713, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
+      propertyPath: m_TagString
+      value: EnemyHand
       objectReference: {fileID: 0}
     - target: {fileID: 8686318851878775967, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_Sprite

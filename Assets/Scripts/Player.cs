@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Sprite idleSprite;
     public Sprite gunSprite;
     public Sprite normalSprite;
+    public GameObject hitEffect;
 
     //
 
@@ -57,13 +58,28 @@ public class Player : MonoBehaviour
             Physics2D.IgnoreCollision(collision.collider,
             GetComponent<Collider2D>());
 
-            Debug.Log(collision.collider);
 
             // ignore
         }
-        if (collision.gameObject.CompareTag("EnemyHand") || 
-            collision.gameObject.CompareTag("EnemyBullet"))
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("EnemyHand") && 
+            playerShield.playerShielded.Equals(false))
         {
+            GameObject hitEffectInstance = Instantiate(hitEffect, 
+                transform.position, Quaternion.identity);
+            Destroy(hitEffectInstance, 2f);
+            //die
+        }
+        if (collider.gameObject.CompareTag("EnemyBullet") &&
+            playerShield.playerShielded.Equals(false))
+        {
+            GameObject hitEffectInstance = Instantiate(hitEffect, 
+                transform.position, Quaternion.identity);
+            Destroy(hitEffectInstance, 2f);
+            Destroy(collider.gameObject);
             //die
         }
     }

@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6966500546099151041}
   m_Layer: 0
   m_Name: Baton
-  m_TagString: Untagged
+  m_TagString: PlayerBaton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,3 +225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIdleBaton: {fileID: 7804043824072628412}
   playerUsedBaton: {fileID: 7138886882236831409}
+  batonCooldown: 0.5
+  batonUseTime: 0.5
+  batonDamage: 1

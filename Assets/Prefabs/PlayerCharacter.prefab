@@ -29,7 +29,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6657608144659730638}
   - component: {fileID: 3091680070937350643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 9049648161402521920}
   - component: {fileID: -7583434728498265335}
   - component: {fileID: 3710876333091052791}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -280,6 +280,7 @@ MonoBehaviour:
   idleSprite: {fileID: 21300000, guid: 257648d378fb8ac4c8d6c3b2527866d5, type: 3}
   gunSprite: {fileID: 21300000, guid: be90dda84334a6d4ebfb970ea56f438f, type: 3}
   normalSprite: {fileID: 21300000, guid: 4568c50b4d4d1c141a7a0b396e95e29c, type: 3}
+  hitEffect: {fileID: 4318046876585605126, guid: a204b5b72377313418e5734171f0e7eb, type: 3}
   playerGun: {fileID: 1884567396}
   playerShield: {fileID: 4688526719891158623}
   playerBaton: {fileID: 3940314325176936675}
@@ -361,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112561499027641585}
   - component: {fileID: 5923091441513670211}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +445,7 @@ GameObject:
   - component: {fileID: 223949550633991722}
   - component: {fileID: 8672922430029997579}
   - component: {fileID: 4424147577763995753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shadow
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -543,6 +544,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 280755354308960147, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
+      propertyPath: layer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6628231048287039798, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -594,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 7417579079370340525, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
       propertyPath: m_Name
       value: RiotShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417579079370340525, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7417579079370340525, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
       propertyPath: m_IsActive
@@ -672,9 +681,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7138886882236831409, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804043824072628412, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8161553102296696085, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
       propertyPath: m_Name
       value: Baton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161553102296696085, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
@@ -752,6 +773,10 @@ PrefabInstance:
     - target: {fileID: 6002536871462157713, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_Name
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002536871462157713, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6002536871462157713, guid: 1eb8bf200bbf8e14fa56b42f1f2afc90, type: 3}
       propertyPath: m_IsActive

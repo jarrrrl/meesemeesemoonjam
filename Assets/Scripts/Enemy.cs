@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public BattleRegion regionBelongTo;
     public GameObject playerBoundsTop;
     public GameObject playerBoundsBottom;
-
+    public GameObject hitEffect;
 
     public float moveSpeed = 5f;
     private static float maxHealth = 3;
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
             GetComponent<Collider2D>());
     }
 
-    public void TakeDamagePunch()
+    public void TakeDamageBaton()
     {
         maxHealth--;
         if(maxHealth <= 0)
@@ -55,14 +55,12 @@ public class Enemy : MonoBehaviour
         if(maxHealth <= 0)
         {
             KillEnemy();
-            regionBelongTo.numEnemies--;
-            regionBelongTo.AreEnemiesLeft();
-            
         }
     }
     private void KillEnemy()
     {
-
+        regionBelongTo.numEnemies--;
+        regionBelongTo.AreEnemiesLeft();
         Destroy(gameObject);
         //maybe switch to enemy on ground before destroyed?
     }
@@ -72,7 +70,15 @@ public class Enemy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             TakeDamageGun();
-            GameObject hitEffectInstance = Instantiate(Bullet.bulletHitEffect, transform.position,
+            GameObject hitEffectInstance = Instantiate(hitEffect, transform.position,
+            Quaternion.identity);
+            Destroy(hitEffectInstance, 2f);
+            return;
+        }
+        if (collision.gameObject.CompareTag("PlayerBaton"))
+        {
+            TakeDamageBaton();
+            GameObject hitEffectInstance = Instantiate(hitEffect, transform.position,
             Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             return;

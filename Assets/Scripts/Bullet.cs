@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
         get => bulletVelocity;
         set => bulletVelocity = value;
     }
-    public static GameObject bulletHitEffect; //the sprite of when a bullet hits
 
 
     public Rigidbody2D rb; //2d collider box physics container
@@ -31,10 +30,7 @@ public class Bullet : MonoBehaviour
      */
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Shield"))
-        {
-            return;
-        }
+        
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Physics2D.IgnoreCollision(collision.collider,

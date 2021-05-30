@@ -6,7 +6,7 @@ public class EnemyFist : MonoBehaviour
 {
     public float fireSpeed = 6f;
     public float fistDamage = 1f;
-    public float gunUseTimer = 2f;
+    public float fistUseTimer = 2f;
     public GameObject fistHitbox;
 
 
@@ -18,13 +18,13 @@ public class EnemyFist : MonoBehaviour
 
     public void PunchFist()
     {
-        fistHitbox.SetActive(true);
+        fistHitbox.GetComponent<Collider2D>().enabled = true;
         StartCoroutine(GunUseTimer());
     }
     private IEnumerator GunUseTimer()
     {
-        yield return new WaitForSeconds(gunUseTimer);
+        yield return new WaitForSeconds(fistUseTimer);
 
-        fistHitbox.SetActive(false);
+        fistHitbox.GetComponent<Collider2D>().enabled = false;
     }
 }

@@ -810,6 +810,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6639463554334342669, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
+      propertyPath: enemyFist
+      value: 
+      objectReference: {fileID: 5371562234239833696}
+    - target: {fileID: 6639463554334342669, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: enemyRegion
       value: 
       objectReference: {fileID: 4403976267298758836}
@@ -824,3 +828,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
   m_PrefabInstance: {fileID: 4403976267313905816}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5371562234239833696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8616950076293240568, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
+  m_PrefabInstance: {fileID: 4403976267313905816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce55a017eb3a0b84b8558bf9f80dc0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

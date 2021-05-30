@@ -6,7 +6,9 @@ public class EnemyController : MonoBehaviour
 {
 
     private bool canFire = true;
+    private bool canPunch = true;
     public Gun enemyGun;
+    public EnemyFist enemyFist;
     //public Fist enemyFist;
 
     public Sprite idleSprite;
@@ -83,11 +85,12 @@ public class EnemyController : MonoBehaviour
     public void GunAttack()
     {
         if (direction.y <= 0.2f && direction.y >= -0.2f && canFire
-            && (Vector2.Distance(playerObject.transform.position, transform.position) > 15f))
+            && (Vector2.Distance(playerObject.transform.position, transform.position) > 15f
+            && canPunch))
         {
             enemyObject.moveSpeed -= 2f;
             enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
-            //enemyFist.transform.gameObject.SetActive(false);
+            enemyFist.GetComponent<Collider2D>().enabled = false;
 
             enemyGun.ShootGun();
             StartCoroutine(FireSpeedTimer());
@@ -97,14 +100,14 @@ public class EnemyController : MonoBehaviour
     public void PunchAttack()
     {
         if (Mathf.Abs(playerObject.transform.position.x - transform.position.x) < 5f
-            && Mathf.Abs(playerObject.transform.position.y - transform.position.y) < 5f)
+            && Mathf.Abs(playerObject.transform.position.y - transform.position.y) < 5f
+            && canPunch && canFire)
         {
             enemyObject.moveSpeed = 0f;
             enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
-            //enemyFist.transform.gameObject.SetActive(false);
 
-            enemyGun.ShootGun();
-            StartCoroutine(FireSpeedTimer());
+            enemyFist.PunchFist();
+            StartCoroutine(PunchSpeedTimer());
         }
     }
     
@@ -113,6 +116,7 @@ public class EnemyController : MonoBehaviour
     {
         MoveCharacter(movement);
         GunAttack();
+        PunchAttack();
     }
     private void Rotate(Vector2 direction)
     {
@@ -134,6 +138,16 @@ public class EnemyController : MonoBehaviour
 
         canFire = true;
         enemyObject.moveSpeed += 2f;
+    }
+    private IEnumerator PunchSpeedTimer()
+    {
+        canPunch = false;
+        yield return new WaitForSeconds(enemyFist.fireSpeed);
+        enemyObject.GetComponent<SpriteRenderer>().sprite = idleSprite;
+
+
+        canPunch = true;
+        enemyObject.moveSpeed += 5f;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
