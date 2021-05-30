@@ -5,4 +5,10 @@ using UnityEngine;
 public class PlayerGun : Gun
 {
 
+    private void Reset()
+    {
+        fireSpeed = 2f;
+        gunUseTimer = 2f;
+
+}
 }

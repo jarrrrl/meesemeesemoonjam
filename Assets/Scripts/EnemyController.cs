@@ -64,17 +64,11 @@ public class EnemyController : MonoBehaviour
             movement = direction;
         }
 
-        /*if (currentState.Equals("active"))
-        {
-            MoveCharacter(movement);
-            Debug.Log(movement);
-        }*/
-
     }
     void MoveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)enemyObject.transform.position + 
-            (direction * Enemy.MoveSpeed * Time.deltaTime));
+        rb.MovePosition((Vector2)enemyObject.transform.position +
+          (direction * enemyObject.moveSpeed * Time.deltaTime));
     }
 
     public void Idle()
@@ -88,26 +82,32 @@ public class EnemyController : MonoBehaviour
     
     public void GunAttack()
     {
-        if (!canFire || !(direction.y <= 0.2f && direction.y >= -0.2f))
+        if (direction.y <= 0.2f && direction.y >= -0.2f && canFire
+            && (Vector2.Distance(playerObject.transform.position, transform.position) > 15f))
         {
-            return;
-        }
-        enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
-        //enemyFist.transform.gameObject.SetActive(false);
+            enemyObject.moveSpeed -= 2f;
+            enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
+            //enemyFist.transform.gameObject.SetActive(false);
 
-        enemyGun.ShootGun();
-        StartCoroutine(FireSpeedTimer());
+            enemyGun.ShootGun();
+            StartCoroutine(FireSpeedTimer());
+        }
     }
 
     public void PunchAttack()
     {
+        if (Mathf.Abs(playerObject.transform.position.x - transform.position.x) < 5f
+            && Mathf.Abs(playerObject.transform.position.y - transform.position.y) < 5f)
+        {
+            enemyObject.moveSpeed = 0f;
+            enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
+            //enemyFist.transform.gameObject.SetActive(false);
 
+            enemyGun.ShootGun();
+            StartCoroutine(FireSpeedTimer());
+        }
     }
     
-    public void QueueWait()
-    {
-
-    }
 
     public void Activated()
     {
@@ -128,12 +128,12 @@ public class EnemyController : MonoBehaviour
     private IEnumerator FireSpeedTimer()
     {
         canFire = false;
-
-        yield return new WaitForSeconds(Gun.FireSpeed);
+        yield return new WaitForSeconds(enemyGun.fireSpeed);
         enemyObject.GetComponent<SpriteRenderer>().sprite = idleSprite;
 
 
         canFire = true;
+        enemyObject.moveSpeed += 2f;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

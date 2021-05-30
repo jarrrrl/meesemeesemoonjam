@@ -723,6 +723,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4731663731645481798, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
+      propertyPath: fireSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4731663731645481798, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
+      propertyPath: gunUseTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6639463554334342669, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: enemyRegion
       value: 

@@ -7,27 +7,12 @@ public class Gun : MonoBehaviour
     public Transform firePoint; //where the bullet is fired from
     public GameObject bulletPrefab;
     public GameObject gunObject;
-    private static int ammoCount;
-    private static float fireSpeed = 2f;
-    private static float gunDamage = 3f;
-    public static float gunUseTimer = 2f;
-    public static float GunDamage
-    {
-        get => gunDamage;
-        set => gunDamage = value;
-    }
+    public int ammoCount;
+    public float fireSpeed = 6f;
+    public float gunDamage = 3f;
+    public float gunUseTimer = 5f;
 
-    public static int AmmoCount
-    {
-        get => ammoCount;
-        set => ammoCount = value;
-    }
 
-    public static float FireSpeed
-    {
-        get => fireSpeed;
-        set => fireSpeed = value;
-    }
  
 
     /*

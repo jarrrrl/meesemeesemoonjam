@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public GameObject playerBoundsBottom;
 
 
-    private static float moveSpeed = 5f;
+    public float moveSpeed = 5f;
     private static float maxHealth = 3;
     private static float currenthealth;
     public static float MaxHealth
@@ -23,11 +23,6 @@ public class Enemy : MonoBehaviour
     {
         get => currenthealth;
         set => currenthealth = value;
-    }
-    public static float MoveSpeed
-    {
-        get => moveSpeed;
-        set => moveSpeed = value;
     }
 
 
@@ -68,7 +63,7 @@ public class Enemy : MonoBehaviour
     private void KillEnemy()
     {
 
-        Destroy(gameObject, 3f);
+        Destroy(gameObject);
         //maybe switch to enemy on ground before destroyed?
     }
     private void OnTriggerEnter2D(Collider2D collision)

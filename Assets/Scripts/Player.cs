@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
     {
         canFire = false;
 
-        yield return new WaitForSeconds(Gun.FireSpeed);
+        yield return new WaitForSeconds(playerGun.fireSpeed);
         playerBaton.transform.gameObject.SetActive(true);
         this.GetComponent<SpriteRenderer>().sprite = normalSprite;
 
@@ -128,7 +128,7 @@ public class Player : MonoBehaviour
     {
         canShield = false;
 
-        yield return new WaitForSeconds(RiotShield.ShieldCooldown);
+        yield return new WaitForSeconds(playerShield.shieldCooldown);
         playerBaton.transform.gameObject.SetActive(true);
 
 
@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
     {
         canBaton = false;
 
-        yield return new WaitForSeconds(Baton.BatonCooldown);
+        yield return new WaitForSeconds(playerBaton.batonCooldown);
         this.GetComponent<SpriteRenderer>().sprite = normalSprite;
         canBaton = true;
     }

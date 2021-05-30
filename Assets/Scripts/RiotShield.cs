@@ -7,13 +7,9 @@ public class RiotShield : MonoBehaviour
     public GameObject playerBoundsTop;
     public GameObject playerBoundsBottom;
     public GameObject riotShield;
-    private static float shieldCooldown = 3.5f;
+    public float shieldCooldown = 3.5f;
     private static float shieldUseTime = 3f;
-    public static float ShieldCooldown
-    {
-        get => shieldCooldown;
-        set => shieldCooldown = value;
-    }
+
     private void Update()
     {
         Physics2D.IgnoreCollision(playerBoundsTop.GetComponent<Collider2D>(),
