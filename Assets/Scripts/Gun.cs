@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     private static int ammoCount;
     private static float fireSpeed = 2f;
     private static float gunDamage = 3f;
+    public static float gunUseTimer = 2f;
     public static float GunDamage
     {
         get => gunDamage;
@@ -35,7 +36,15 @@ public class Gun : MonoBehaviour
 
     public void ShootGun()
     {
+        gunObject.SetActive(true);
+        StartCoroutine(GunUseTimer());
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+    private IEnumerator GunUseTimer()
+    {
+        yield return new WaitForSeconds(gunUseTimer);
+
+        gunObject.SetActive(false);
     }
 }
 

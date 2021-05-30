@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
             // ignore
         }
         if (collision.gameObject.CompareTag("EnemyHand") || 
-            collision.gameObject.CompareTag("Bullet"))
+            collision.gameObject.CompareTag("EnemyBullet"))
         {
             //die
         }

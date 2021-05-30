@@ -31,7 +31,7 @@ public class BattleRegion : MonoBehaviour
     {
         //battle area activate - set enemies to active state and lock camera and
         //activate boundaries for area
-        if (locationTrigger.hasTriggered)
+        if (locationTrigger.hasTriggered && numEnemies > 0)
         {
             battleBorderLeft.GetComponent<BoxCollider2D>().enabled = true;
             battleBorderRight.GetComponent<BoxCollider2D>().enabled = true;
@@ -43,7 +43,6 @@ public class BattleRegion : MonoBehaviour
         if (numEnemies == 0)
         {
             battleBorderRight.GetComponent<BoxCollider2D>().enabled = false;
-            Debug.Log("enemies gone");
             //give camera priority to the player camera again
             gameCameraController.SwitchPriority();
 

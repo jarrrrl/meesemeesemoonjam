@@ -849,10 +849,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1242669304, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 2113478679}
     - target: {fileID: 3899182488575179954, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
       propertyPath: playerBoundsTop
       value: 
@@ -948,14 +944,6 @@ PrefabInstance:
     - target: {fileID: 4403976267298758843, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
       propertyPath: m_Name
       value: Battle Region
-      objectReference: {fileID: 0}
-    - target: {fileID: 5657192972322572435, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5938268948181243516, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7005927529856843413, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
       propertyPath: playerObject

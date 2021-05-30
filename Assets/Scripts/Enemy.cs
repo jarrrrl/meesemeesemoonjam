@@ -5,11 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // ** enemy variables
+
     public BattleRegion regionBelongTo;
     public GameObject playerBoundsTop;
     public GameObject playerBoundsBottom;
 
-    private static float moveSpeed = 100f;
+
+    private static float moveSpeed = 5f;
     private static float maxHealth = 3;
     private static float currenthealth;
     public static float MaxHealth
@@ -44,26 +46,26 @@ public class Enemy : MonoBehaviour
             GetComponent<Collider2D>());
     }
 
-    public void takeDamagePunch()
+    public void TakeDamagePunch()
     {
         maxHealth--;
         if(maxHealth <= 0)
         {
-            killEnemy();
+            KillEnemy();
         }
     }
-    public void takeDamageGun()
+    public void TakeDamageGun()
     {
         maxHealth = maxHealth - 3;
         if(maxHealth <= 0)
         {
-            killEnemy();
+            KillEnemy();
             regionBelongTo.numEnemies--;
             regionBelongTo.AreEnemiesLeft();
             
         }
     }
-    private void killEnemy()
+    private void KillEnemy()
     {
 
         Destroy(gameObject, 3f);
@@ -71,14 +73,15 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             Destroy(collision.gameObject);
-            takeDamageGun();
+            TakeDamageGun();
             GameObject hitEffectInstance = Instantiate(Bullet.bulletHitEffect, transform.position,
             Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             return;
         }
     }
+
 }
