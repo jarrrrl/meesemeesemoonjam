@@ -722,10 +722,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4403976267298758836, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
-      propertyPath: numEnemies
-      value: 4
-      objectReference: {fileID: 0}
+    - target: {fileID: 3899182488575179954, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsTop
+      value: 
+      objectReference: {fileID: 1746844541}
+    - target: {fileID: 3899182488575179954, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsBottom
+      value: 
+      objectReference: {fileID: 298930652}
+    - target: {fileID: 3899182488602131682, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsTop
+      value: 
+      objectReference: {fileID: 1746844541}
+    - target: {fileID: 3899182488602131682, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsBottom
+      value: 
+      objectReference: {fileID: 298930652}
+    - target: {fileID: 3899182490117879723, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsTop
+      value: 
+      objectReference: {fileID: 1746844541}
+    - target: {fileID: 3899182490117879723, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsBottom
+      value: 
+      objectReference: {fileID: 298930652}
+    - target: {fileID: 3899182490459058879, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsTop
+      value: 
+      objectReference: {fileID: 1746844541}
+    - target: {fileID: 3899182490459058879, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
+      propertyPath: playerBoundsBottom
+      value: 
+      objectReference: {fileID: 298930652}
     - target: {fileID: 4403976267298758836, guid: 3351de05d08420040ad24f0bd439ee61, type: 3}
       propertyPath: playerCollider
       value: 

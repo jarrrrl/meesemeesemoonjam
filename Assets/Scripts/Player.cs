@@ -54,7 +54,17 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // gameover here
+            Physics2D.IgnoreCollision(collision.collider,
+            GetComponent<Collider2D>());
+
+            Debug.Log(collision.collider);
+
+            // ignore
+        }
+        if (collision.gameObject.CompareTag("EnemyHand") || 
+            collision.gameObject.CompareTag("Bullet"))
+        {
+            //die
         }
     }
 
@@ -132,5 +142,6 @@ public class Player : MonoBehaviour
         this.GetComponent<SpriteRenderer>().sprite = normalSprite;
         canBaton = true;
     }
+
 
 }

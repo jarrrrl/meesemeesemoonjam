@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
     // ** enemy variables
     public BattleRegion regionBelongTo;
+    public GameObject playerBoundsTop;
+    public GameObject playerBoundsBottom;
+
     private static float moveSpeed = 100f;
     private static float maxHealth = 3;
     private static float currenthealth;
@@ -35,7 +38,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Physics2D.IgnoreCollision(playerBoundsTop.GetComponent<Collider2D>(),
+            GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(playerBoundsBottom.GetComponent<Collider2D>(),
+            GetComponent<Collider2D>());
     }
 
     public void takeDamagePunch()
@@ -66,11 +72,11 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            Destroy(collision.gameObject);
             takeDamageGun();
             GameObject hitEffectInstance = Instantiate(Bullet.bulletHitEffect, transform.position,
             Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
-            Destroy(collision);
             return;
         }
     }

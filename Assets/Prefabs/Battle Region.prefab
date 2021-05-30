@@ -475,7 +475,7 @@ MonoBehaviour:
   battleBorderLeft: {fileID: 4403976266886149553}
   battleBorderRight: {fileID: 4403976266886149552}
   playerCollider: {fileID: 0}
-  numEnemies: 5
+  numEnemies: 4
 --- !u!61 &4403976267298758839
 BoxCollider2D:
   m_ObjectHideFlags: 0

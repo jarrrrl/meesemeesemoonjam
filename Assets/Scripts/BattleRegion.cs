@@ -9,7 +9,7 @@ public class BattleRegion : MonoBehaviour
     public BattleRegionBorder battleBorderRight;
 
     public Player playerCollider;
-    private int numEnemies = 4;
+    public int numEnemies = 4;
     public static int NumEnemies
     {
         get => NumEnemies;
@@ -31,7 +31,7 @@ public class BattleRegion : MonoBehaviour
             battleBorderLeft.GetComponent<BoxCollider2D>().enabled = true;
             battleBorderRight.GetComponent<BoxCollider2D>().enabled = true;
         }
-        if(numEnemies == 0)
+        if (numEnemies == 0)
         {
             areEnemies = false;
         }
@@ -45,6 +45,5 @@ public class BattleRegion : MonoBehaviour
         }
 
     }
-
 
 }
