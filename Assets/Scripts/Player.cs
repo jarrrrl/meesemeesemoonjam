@@ -20,8 +20,6 @@ public class Player : MonoBehaviour
     private bool canShield = true;
     private bool canBaton = true;
     //
-    public GameObject playerShadow;
-    public GameObject playerCollideBox;
     // ** player variables
     private static float moveSpeed = 25f;
 

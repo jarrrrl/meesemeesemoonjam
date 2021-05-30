@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 3710876333091052791}
   m_Layer: 0
   m_Name: PlayerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,6 +537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6821366076090848527}
     m_Modifications:
+    - target: {fileID: -1882090372018635543, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6628231048287039798, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
       propertyPath: m_RootOrder
       value: 3
