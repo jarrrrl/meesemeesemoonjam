@@ -7,7 +7,7 @@ public class EnemyFist : MonoBehaviour
     public float fireSpeed = 6f;
     public float fistDamage = 1f;
     public float gunUseTimer = 2f;
-    public GameObject fistHitbox
+    public GameObject fistHitbox;
 
 
 
