@@ -9,6 +9,12 @@ public class Gun : MonoBehaviour
     public GameObject gunObject;
     private static int ammoCount;
     private static float fireSpeed = 2f;
+    private static float gunDamage = 3f;
+    public static float GunDamage
+    {
+        get => gunDamage;
+        set => gunDamage = value;
+    }
 
     public static int AmmoCount
     {

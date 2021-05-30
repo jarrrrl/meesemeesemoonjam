@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private bool canBaton = true;
     //
     // ** player variables
-    private static float moveSpeed = 25f;
+    private static float moveSpeed = 15f;
 
     public static float MoveSpeed
     {

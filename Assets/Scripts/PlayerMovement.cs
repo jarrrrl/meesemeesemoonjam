@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movementInput.x = Input.GetAxisRaw("Horizontal") * playerMoveSpeed;
-        movementInput.y = Input.GetAxisRaw("Vertical") * playerMoveSpeed;
+        movementInput.y = Input.GetAxisRaw("Vertical") * playerMoveSpeed / 4;
         Rotate();
 
     }
