@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
         get => bulletVelocity;
         set => bulletVelocity = value;
     }
-
     public static GameObject bulletHitEffect; //the sprite of when a bullet hits
 
 
@@ -21,6 +20,10 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * BulletVelocity;
+    }
+    private void Update()
+    {
+        
     }
     /**
      * Whenever a bullet hits an object, it will create a hit effect, destroy the bullet, then
@@ -32,7 +35,13 @@ public class Bullet : MonoBehaviour
         {
             return;
         }
-        
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Physics2D.IgnoreCollision(collision.collider,
+                GetComponent<Collider2D>());
+            return;
+        }
+
         Destroy(gameObject);
     }
 

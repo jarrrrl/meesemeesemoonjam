@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25233fee3e7fae748ba617d49d5275c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHitEffect: {fileID: 0}
+  playerBoundsTop: {fileID: 867782201260414263, guid: d8aec8d84b2dd8249b41cba02a287016, type: 3}
   rb: {fileID: 8716011762625571234}
 --- !u!50 &8716011762625571234
 Rigidbody2D:

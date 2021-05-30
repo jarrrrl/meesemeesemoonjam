@@ -5,7 +5,7 @@ using UnityEngine;
 public class BattleRegionTrigger : MonoBehaviour
 {
     public bool hasTriggered;
-
+    public CameraController gameCameraController;
 
 
     // Start is called before the first frame update
@@ -24,8 +24,7 @@ public class BattleRegionTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && hasTriggered == false)
         {
             hasTriggered = true;
-
-            
+            gameCameraController.SwitchPriority();
 
         }
 

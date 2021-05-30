@@ -28,10 +28,10 @@ Transform:
   m_GameObject: {fileID: 1019119547794445550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.504, y: 0, z: 0}
-  m_LocalScale: {x: 0.0076874997, y: 1, z: 1}
+  m_LocalScale: {x: 0.0076874997, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 4403976267298758838}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5657192972322572435
 SpriteRenderer:
@@ -150,10 +150,10 @@ Transform:
   m_GameObject: {fileID: 3655596640701056018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.504, y: 0, z: 0}
-  m_LocalScale: {x: 0.0076874997, y: 1, z: 1}
+  m_LocalScale: {x: 0.0076874997, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 4403976267298758838}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2664598187846673654
 SpriteRenderer:
@@ -367,6 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasTriggered: 0
+  gameCameraController: {fileID: 0}
 --- !u!1 &4403976267298758843
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +399,6 @@ Transform:
   m_LocalScale: {x: 50, y: 14, z: 1}
   m_Children:
   - {fileID: 4403976266894076762}
-  - {fileID: 4445175230908564732}
   - {fileID: 5938268948181243516}
   - {fileID: 4916780076003432652}
   - {fileID: 1178127784188339784}
@@ -474,6 +474,8 @@ MonoBehaviour:
   locationTrigger: {fileID: 4403976266894076757}
   battleBorderLeft: {fileID: 4403976266886149553}
   battleBorderRight: {fileID: 4403976266886149552}
+  gameCameraController: {fileID: 0}
+  battleRegionCameraArea: {fileID: 0}
   playerCollider: {fileID: 0}
   numEnemies: 4
 --- !u!61 &4403976267298758839
@@ -502,88 +504,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &7307589374005651432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4445175230908564732}
-  - component: {fileID: 92195378053072146}
-  - component: {fileID: 629789707626581993}
-  m_Layer: 0
-  m_Name: Battle Region Camera Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4445175230908564732
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307589374005651432}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4403976267298758838}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &92195378053072146
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307589374005651432}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5018, y: 1.0357}
-      - {x: -0.50179124, y: -0.6785609}
-      - {x: 0.3517911, y: -0.6785423}
-      - {x: 0.3517603, y: 1.0354029}
---- !u!50 &629789707626581993
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307589374005651432}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &4403976265456848581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 4403976267298758836}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_LocalScale.x
@@ -675,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 4403976267298758836}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_LocalScale.x
@@ -753,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 4403976267298758836}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_LocalScale.x
@@ -831,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 4403976267298758836}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3262750103683688144, guid: 0eb369bac0d215c4b876bcbf25645dd6, type: 3}
       propertyPath: m_LocalScale.x
