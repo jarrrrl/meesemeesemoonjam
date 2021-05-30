@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 867782201260414261}
   - component: {fileID: 867782201260414260}
   - component: {fileID: 867782201260414410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Bounds Top
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

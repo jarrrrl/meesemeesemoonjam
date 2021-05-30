@@ -279,8 +279,6 @@ MonoBehaviour:
   playerGun: {fileID: 1884567396}
   playerShield: {fileID: 4688526719891158623}
   playerBaton: {fileID: 3940314325176936675}
-  playerShadow: {fileID: 0}
-  playerCollideBox: {fileID: 0}
 --- !u!95 &7244776089268437321
 Animator:
   serializedVersion: 3
@@ -444,7 +442,7 @@ GameObject:
   - component: {fileID: 4424147577763995753}
   m_Layer: 0
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,7 +537,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1882090372018635543, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628231048287039798, guid: 599efdd4f89597d4ab2e30259e55198f, type: 3}
       propertyPath: m_RootOrder

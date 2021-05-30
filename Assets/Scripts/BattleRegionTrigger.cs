@@ -6,6 +6,8 @@ public class BattleRegionTrigger : MonoBehaviour
 {
     public bool hasTriggered;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,9 @@ public class BattleRegionTrigger : MonoBehaviour
         {
             hasTriggered = true;
 
-            //battle area activate - set enemies to active state and lock camera
+            
+
         }
-        
+
     }
 }

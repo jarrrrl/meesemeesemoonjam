@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
         set => bulletVelocity = value;
     }
 
-    public GameObject bulletHitEffect; //the sprite of when a bullet hits
+    public static GameObject bulletHitEffect; //the sprite of when a bullet hits
 
 
     public Rigidbody2D rb; //2d collider box physics container
@@ -32,9 +32,8 @@ public class Bullet : MonoBehaviour
         {
             return;
         }
-        GameObject hitEffectInstance = Instantiate(bulletHitEffect, transform.position, 
-            Quaternion.identity);
-        Destroy(bulletHitEffect, 5f);
+        
         Destroy(gameObject);
     }
+
 }
