@@ -92,6 +92,10 @@ public class Player : MonoBehaviour
             playerGun.ammoCount += 4;
             Destroy(collider.gameObject);
         }
+        if (collider.gameObject.CompareTag("ChangeBackgroundBar"))
+        {
+            FindObjectOfType<ChangeBackgroundBar>().ChangeBackground();
+        }
     }
 
 
