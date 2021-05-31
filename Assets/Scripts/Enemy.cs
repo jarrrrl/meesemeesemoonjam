@@ -24,8 +24,10 @@ public class Enemy : MonoBehaviour
             GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(playerBoundsBottom.GetComponent<Collider2D>(),
             GetComponent<Collider2D>());
-
-        animator.SetFloat("Speed", GetComponent<Rigidbody2D>().angularVelocity);
+        
+    }
+    private void FixedUpdate()
+    {
     }
 
     public void TakeDamageBaton()

@@ -301,6 +301,7 @@ MonoBehaviour:
   playerBoundsBottom: {fileID: 0}
   hitEffect: {fileID: 0}
   batonHitEffect: {fileID: 3045438682063430384, guid: 3edb8a51f3a707c43b4eeda9cce16fd7, type: 3}
+  animator: {fileID: 0}
   moveSpeed: 5
   maxHealth: 3
 --- !u!50 &37840609970382852
@@ -332,7 +333,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796369525152639986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4e01374fc4de20c4e9c6c6c821933f80, type: 2}
   m_CullingMode: 0
