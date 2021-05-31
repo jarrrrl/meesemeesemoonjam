@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3368454199211976891}
   m_Layer: 0
   m_Name: Used Baton
-  m_TagString: Untagged
+  m_TagString: PlayerBaton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 6543554114617228223}
   m_Layer: 0
   m_Name: Idle Baton
-  m_TagString: Untagged
+  m_TagString: PlayerBaton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

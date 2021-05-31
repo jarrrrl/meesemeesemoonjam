@@ -65,12 +65,17 @@ public class Enemy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("PlayerBaton"))
         {
+            Debug.Log("baton hit enemy");
             TakeDamageBaton();
             GameObject hitEffectInstance = Instantiate(hitEffect, transform.position,
             Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             return;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 
 }

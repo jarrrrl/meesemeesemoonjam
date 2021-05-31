@@ -147,22 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790f612278910e14792a9addcf3076f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6288051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 685177657966441397, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-  m_PrefabInstance: {fileID: 1854378579}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6288054 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3816159550402161919, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-  m_PrefabInstance: {fileID: 1854378579}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f89bbcf0123a184ea2242c038af71b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &25632501
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.5
+  m_LookaheadTime: 0.4
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
@@ -1981,11 +1965,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 867782201260414263, guid: d8aec8d84b2dd8249b41cba02a287016, type: 3}
   m_PrefabInstance: {fileID: 867782199516474954}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1810984806 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6657608144659730638, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-  m_PrefabInstance: {fileID: 1854378579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839511098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,26 +2081,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8648468973754639210, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-      propertyPath: playerGun
-      value: 
-      objectReference: {fileID: 6288054}
     - target: {fileID: 3114928761315936403, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 3816159550402161919, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1810984806}
-    - target: {fileID: 3816159550402161919, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-      propertyPath: gunObject
-      value: 
-      objectReference: {fileID: 6288051}
-    - target: {fileID: 3816159550402161919, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 143653144235568602, guid: ff2ab1020977a8d4b87b80d1d13b5dfb, type: 3}
     - target: {fileID: 4688526719891158623, guid: c5f2befa46f0e4a4fbdce2261296fa26, type: 3}
       propertyPath: playerBoundsTop
       value: 

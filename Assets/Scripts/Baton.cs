@@ -7,7 +7,7 @@ public class Baton : MonoBehaviour
     public GameObject playerIdleBaton;
     public GameObject playerUsedBaton;
     public float batonCooldown = 0.5f;
-    public float batonUseTime = 0.5f;
+    public float batonUseTime = 3f;
     public float batonDamage = 1f;
 
     /*

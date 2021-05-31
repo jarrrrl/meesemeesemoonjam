@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f89bbcf0123a184ea2242c038af71b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  gunObject: {fileID: 0}
+  firePoint: {fileID: 6657608144659730638}
+  bulletPrefab: {fileID: 143653144235568602, guid: ff2ab1020977a8d4b87b80d1d13b5dfb, type: 3}
+  gunObject: {fileID: 685177657966441397}
   fireSpeed: 2
   gunDamage: 3
   gunUseTimer: 2
@@ -281,7 +281,7 @@ MonoBehaviour:
   gunSprite: {fileID: 21300000, guid: be90dda84334a6d4ebfb970ea56f438f, type: 3}
   normalSprite: {fileID: 21300000, guid: 4568c50b4d4d1c141a7a0b396e95e29c, type: 3}
   hitEffect: {fileID: 4318046876585605126, guid: a204b5b72377313418e5734171f0e7eb, type: 3}
-  playerGun: {fileID: 0}
+  playerGun: {fileID: 3816159550402161919}
   playerShield: {fileID: 4688526719891158623}
   playerBaton: {fileID: 3940314325176936675}
 --- !u!95 &7244776089268437321
@@ -352,6 +352,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!61 &24332131
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823942688360627859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.45, y: 1.35}
+    newSize: {x: 0.45, y: 1.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45, y: 1.35}
+  m_EdgeRadius: 0
 --- !u!1 &8038706517410529975
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,13 +707,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3368454199211976891, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966500546099151041, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+      propertyPath: batonUseTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966500546099151041, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+      propertyPath: batonCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7138886882236831409, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7804043824072628412, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8161553102296696085, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
       propertyPath: m_Name
@@ -695,9 +733,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161553102296696085, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3368454199211976891, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
 --- !u!4 &4719024652244492423 stripped
 Transform:
@@ -715,6 +754,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e115b4b551089b44a9900e5fa10c4b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3823942688360627859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7138886882236831409, guid: 04fe3b1fd7d75ef4b9c9f5108c7b82d6, type: 3}
+  m_PrefabInstance: {fileID: 6197855059087452194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6543578561560710692
 PrefabInstance:
   m_ObjectHideFlags: 0

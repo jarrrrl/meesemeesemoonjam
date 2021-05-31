@@ -13,15 +13,15 @@ public class EnemyFist : MonoBehaviour
 
 
     /*
-     * Fires gun from the fire point which is the barrel of the gun
+     * enables punch hitbox for short time
      */
 
     public void PunchFist()
     {
         fistHitbox.GetComponent<Collider2D>().enabled = true;
-        StartCoroutine(GunUseTimer());
+        StartCoroutine(FistUseTimer());
     }
-    private IEnumerator GunUseTimer()
+    private IEnumerator FistUseTimer()
     {
         yield return new WaitForSeconds(fistUseTimer);
 
