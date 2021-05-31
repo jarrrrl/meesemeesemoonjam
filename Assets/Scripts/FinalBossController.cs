@@ -46,6 +46,12 @@ public class FinalBossController : XQCController
     {
      //can't punch attack
     }
+    public override void MoveCharacter(Vector2 direction)
+    {
+        if((Vector2.Distance(playerObject.transform.position, transform.position)) > 10f)
+        rb.MovePosition((Vector2)enemyObject.transform.position +
+          (direction * enemyObject.moveSpeed * Time.deltaTime));
+    }
     private IEnumerator FireSpeedTimer()
     {
         canFire = false;

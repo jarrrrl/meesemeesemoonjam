@@ -81,7 +81,7 @@ public class EnemyController : MonoBehaviour
                 playerObject.GetComponent<SpriteRenderer>().sortingOrder - 1;
         }
     }
-    void MoveCharacter(Vector2 direction)
+    public virtual void MoveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)enemyObject.transform.position +
           (direction * enemyObject.moveSpeed * Time.deltaTime));

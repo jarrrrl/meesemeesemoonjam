@@ -6,6 +6,8 @@ public class Baton : MonoBehaviour
 {
     public GameObject playerIdleBaton;
     public GameObject playerUsedBaton;
+    public GameObject playerBoundsTop;
+    public GameObject playerBoundsBottom;
     public float batonCooldown = 0.5f;
     public float batonUseTime = 3f;
     public float batonDamage = 2f;
@@ -26,5 +28,12 @@ public class Baton : MonoBehaviour
 
         playerIdleBaton.SetActive(true);
         playerUsedBaton.SetActive(false);
+    }
+    private void Update()
+    {
+        Physics2D.IgnoreCollision(playerBoundsTop.GetComponent<Collider2D>(),
+            playerUsedBaton.GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(playerBoundsBottom.GetComponent<Collider2D>(),
+            playerUsedBaton.GetComponent<Collider2D>());
     }
 }

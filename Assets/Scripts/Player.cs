@@ -36,7 +36,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && canShield && !Input.GetKey(KeyCode.E))
+        if (Input.GetButton("Fire1") && canShield && !Input.GetKey(KeyCode.E) &&
+            canBaton)
         {
             PlayerFireInput();
         }
@@ -49,6 +50,10 @@ public class Player : MonoBehaviour
             && canFire)
         {
             PlayerBatonInput();
+        }
+        else if (Input.GetKey(KeyCode.R))
+        {
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -112,6 +117,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        playerBaton.playerUsedBaton.SetActive(false);
         playerGun.transform.gameObject.SetActive(false);
         this.GetComponent<SpriteRenderer>().sprite = normalSprite;
         playerBaton.transform.gameObject.SetActive(false);
