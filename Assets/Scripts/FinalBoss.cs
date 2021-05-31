@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinalBoss : MonoBehaviour
+public class FinalBoss : Enemy
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,10 @@ public class FinalBoss : MonoBehaviour
     void Update()
     {
         
+    }
+    public override void KillEnemy()
+    {
+        this.KillEnemy();
+        //play final cutscene
     }
 }

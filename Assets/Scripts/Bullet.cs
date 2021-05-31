@@ -5,12 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    private static float bulletVelocity = 20f;
-    public static float BulletVelocity
-    {
-        get => bulletVelocity;
-        set => bulletVelocity = value;
-    }
+    public float bulletVelocity = 20f;
 
 
     public Rigidbody2D rb; //2d collider box physics container
@@ -18,7 +13,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * BulletVelocity;
+        rb.velocity = transform.right * bulletVelocity;
     }
     private void Update()
     {

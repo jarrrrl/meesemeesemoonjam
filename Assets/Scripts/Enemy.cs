@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
             KillEnemy();
         }
     }
-    private void KillEnemy()
+    public virtual void KillEnemy()
     {
         regionBelongTo.numEnemies--;
         regionBelongTo.AreEnemiesLeft();

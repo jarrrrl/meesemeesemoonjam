@@ -21,9 +21,9 @@ public class Gun : MonoBehaviour
     public virtual void ShootGun()
     {
  
-            gunObject.SetActive(true);
-            StartCoroutine(GunUseTimer());
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        gunObject.SetActive(true);
+        StartCoroutine(GunUseTimer());
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
     private IEnumerator GunUseTimer()
     {

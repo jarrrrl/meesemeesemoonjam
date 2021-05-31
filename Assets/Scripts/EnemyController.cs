@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 
-    private bool canFire = true;
-    private bool canPunch = true;
+    public bool canFire = true;
+    public bool canPunch = true;
     public Gun enemyGun;
     public EnemyFist enemyFist;
     //public Fist enemyFist;
@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
         }
     }
     
-    public void GunAttack()
+    public virtual void GunAttack()
     {
         if (direction.y <= 0.2f && direction.y >= -0.2f && canFire
             && (Vector2.Distance(playerObject.transform.position, transform.position) > 15f
@@ -97,7 +97,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void PunchAttack()
+    public virtual void PunchAttack()
     {
         if (Mathf.Abs(playerObject.transform.position.x - transform.position.x) < 5f
             && Mathf.Abs(playerObject.transform.position.y - transform.position.y) < 5f

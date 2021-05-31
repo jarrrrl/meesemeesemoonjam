@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossGeneric : MonoBehaviour
+public class MouthLaserBullet : Bullet
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,9 @@ public class BossGeneric : MonoBehaviour
     void Update()
     {
         
+    }
+    private void Reset()
+    {
+        bulletVelocity = 5f;
     }
 }
