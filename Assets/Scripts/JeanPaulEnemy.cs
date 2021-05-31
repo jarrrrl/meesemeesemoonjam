@@ -6,7 +6,7 @@ public class JeanPaulEnemy : Enemy
 {
     public override void KillEnemy()
     {
-        AudioManager.instance.Play("oofLowerPitch");
+        AudioManager.instance.Play("xqcRageWhenDieSound");
         AudioManager.instance.StopPlaying("BossTheme");
         AudioManager.instance.Play("CityTheme");
         Destroy(gameObject);

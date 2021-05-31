@@ -99,6 +99,8 @@ public class Player : MonoBehaviour
         if (collider.gameObject.CompareTag("AmmoCrate"))
         {
             playerGun.ammoCount += 4;
+            AudioManager.instance.Play("ammoPickup");
+
             Destroy(collider.gameObject);
         }
         if (collider.gameObject.CompareTag("ChangeBackgroundBar"))

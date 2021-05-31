@@ -4031,19 +4031,19 @@ MonoBehaviour:
     source: {fileID: 0}
     loop: 0
   - clip: {fileID: 8300000, guid: 4736b4de3776f44449187c0accaa06cd, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     name: gunShotSound
     source: {fileID: 0}
     loop: 0
   - clip: {fileID: 8300000, guid: b898258cadd48234ab9ea7cc72d5812f, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     name: batonHitSound
     source: {fileID: 0}
     loop: 0
   - clip: {fileID: 8300000, guid: 7bc28887f7c11dd448dc0f73a5608fcc, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     name: finalBossLaughSound
     source: {fileID: 0}
@@ -4070,6 +4070,18 @@ MonoBehaviour:
     volume: 0.2
     pitch: 0.5
     name: oofLowerPitch
+    source: {fileID: 0}
+    loop: 0
+  - clip: {fileID: 8300000, guid: bd8be807c8ddbeb4caa9a218c4e014ad, type: 3}
+    volume: 0.2
+    pitch: 0.5
+    name: xqcLowerPitch
+    source: {fileID: 0}
+    loop: 0
+  - clip: {fileID: 8300000, guid: 327328af4c6e2774e9705fd3537aa6e2, type: 3}
+    volume: 0.2
+    pitch: 1
+    name: ammoPickup
     source: {fileID: 0}
     loop: 0
 --- !u!4 &1006215706

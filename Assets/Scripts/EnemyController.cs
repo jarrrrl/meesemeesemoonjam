@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public bool canPunch = true;
     public Gun enemyGun;
     public EnemyFist enemyFist;
-    //public Fist enemyFist;
+
 
     public Sprite idleSprite;
     public Sprite gunSprite;

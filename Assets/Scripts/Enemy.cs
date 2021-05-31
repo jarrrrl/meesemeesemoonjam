@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public GameObject playerBoundsBottom;
     public GameObject hitEffect;
     public GameObject batonHitEffect;
+    public Animator animator;
 
     public float moveSpeed = 5f;
     public float maxHealth = 3;
@@ -23,6 +24,8 @@ public class Enemy : MonoBehaviour
             GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(playerBoundsBottom.GetComponent<Collider2D>(),
             GetComponent<Collider2D>());
+
+        animator.SetFloat("Speed", GetComponent<Rigidbody2D>().angularVelocity);
     }
 
     public void TakeDamageBaton()

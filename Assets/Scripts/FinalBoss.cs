@@ -17,7 +17,7 @@ public class FinalBoss : Enemy
     }
     public override void KillEnemy()
     {
-        AudioManager.instance.Play("oofLowerPitch");
+        AudioManager.instance.Play("xqcRageLower");
         AudioManager.instance.StopPlaying("BossTheme");
         AudioManager.instance.Play("CityTheme");
         Destroy(gameObject);
