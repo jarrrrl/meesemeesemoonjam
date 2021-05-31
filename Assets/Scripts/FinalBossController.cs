@@ -39,7 +39,6 @@ public class FinalBossController : XQCController
 
                 numEyeLasers = 0;
             }
-            StartCoroutine(MaldingSignTimer());
             StartCoroutine(FireSpeedTimer());
         }
     }
@@ -53,15 +52,8 @@ public class FinalBossController : XQCController
         yield return new WaitForSeconds(enemyGun.fireSpeed);
         enemyObject.GetComponent<SpriteRenderer>().sprite = idleSprite;
 
-
+        maldingSign.GetComponent<SpriteRenderer>().enabled = false;
         canFire = true;
         enemyObject.moveSpeed += 2f;
-    }
-    private IEnumerator MaldingSignTimer()
-    {
-        yield return new WaitForSeconds(maldingSignTimer);
-
-        maldingSign.GetComponent<SpriteRenderer>().enabled = false;
-
     }
 }

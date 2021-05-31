@@ -5,7 +5,6 @@ using UnityEngine;
 public class XQCController : EnemyController
 {
     public GameObject maldingSign;
-    public float maldingSignTimer = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,16 +31,28 @@ public class XQCController : EnemyController
     }
     public override void GunAttack()
     {
-        maldingSign.GetComponent<SpriteRenderer>().enabled = true;
-        base.GunAttack();
-        StartCoroutine(MaldingSignTimer());
+        if (direction.y <= 0.2f && direction.y >= -0.2f && canFire
+            && (Vector2.Distance(playerObject.transform.position, transform.position) > 10f
+            && canPunch))
+        {
+            enemyObject.moveSpeed -= 2f;
+            enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
+            enemyFist.GetComponent<Collider2D>().enabled = false;
+            maldingSign.GetComponent<SpriteRenderer>().enabled = true;
 
+
+            enemyGun.ShootGun();
+            StartCoroutine(FireSpeedTimer());
+        }
     }
-    private IEnumerator MaldingSignTimer()
+    private IEnumerator FireSpeedTimer()
     {
-        yield return new WaitForSeconds(maldingSignTimer);
+        canFire = false;
+        yield return new WaitForSeconds(enemyGun.fireSpeed);
+        enemyObject.GetComponent<SpriteRenderer>().sprite = idleSprite;
 
         maldingSign.GetComponent<SpriteRenderer>().enabled = false;
-
+        canFire = true;
+        enemyObject.moveSpeed += 2f;
     }
 }

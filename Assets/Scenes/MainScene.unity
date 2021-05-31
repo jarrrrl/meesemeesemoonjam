@@ -2530,6 +2530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jean Paul Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 6549911259081447021, guid: 371b9ffed0218204986098a387bb5f6e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6838738933308748236, guid: 371b9ffed0218204986098a387bb5f6e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -2558,6 +2562,10 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 2113478676}
+    - target: {fileID: 9061924703382360817, guid: 371b9ffed0218204986098a387bb5f6e, type: 3}
+      propertyPath: maldingSignTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9210125490053365281, guid: 371b9ffed0218204986098a387bb5f6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -3845,6 +3853,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2273550340028382771}
     m_Modifications:
+    - target: {fileID: 1097354357913558235, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1563498195056091841, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3909,6 +3921,10 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 2113478676}
+    - target: {fileID: 4244409225667846836, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
+      propertyPath: maldingSignTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7058045311032919719, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
       propertyPath: bulletPrefab
       value: 
