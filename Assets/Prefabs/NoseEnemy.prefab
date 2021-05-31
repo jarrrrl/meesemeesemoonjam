@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7081737191739995776}
   - component: {fileID: 5709071018448414029}
   - component: {fileID: 37840609970382852}
+  - component: {fileID: 83094295393114258}
   m_Layer: 0
   m_Name: NoseEnemy
   m_TagString: Untagged
@@ -322,6 +323,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &83094295393114258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796369525152639986}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e01374fc4de20c4e9c6c6c821933f80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!60 &5818007272160631317
 PolygonCollider2D:
   m_ObjectHideFlags: 0
