@@ -243,7 +243,6 @@ MonoBehaviour:
   enemyRegion: {fileID: 0}
   direction: {x: 0, y: 0}
   maldingSign: {fileID: 0}
-  maldingSignTimer: 1
   mouthGun: {fileID: 1867101177495047562}
   mouthLaserSprite: {fileID: 21300000, guid: efa0bc0b8004e0944acabbc02b30c2cc, type: 3}
   numEyeLasers: 0
@@ -372,6 +371,7 @@ GameObject:
   - component: {fileID: 4539923476785984440}
   - component: {fileID: 841832353447766744}
   - component: {fileID: 8587692545098579474}
+  - component: {fileID: 6382187735363069723}
   m_Layer: 0
   m_Name: FinalBoss
   m_TagString: Enemy
@@ -604,6 +604,25 @@ MonoBehaviour:
   hitEffect: {fileID: 0}
   moveSpeed: 5
   maxHealth: 20
+--- !u!95 &6382187735363069723
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754577437008697729}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7bdbf763dd4ffce40ad3b13ab1f34709, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5467806375066421621
 PrefabInstance:
   m_ObjectHideFlags: 0
