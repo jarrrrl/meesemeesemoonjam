@@ -65,7 +65,6 @@ public class Enemy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("PlayerBaton"))
         {
-            Debug.Log("baton hit enemy");
             TakeDamageBaton();
             GameObject hitEffectInstance = Instantiate(hitEffect, transform.position,
             Quaternion.identity);
