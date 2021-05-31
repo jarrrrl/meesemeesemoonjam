@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public Canvas winCanvas;
     public void EndGame()
     {
-        Debug.Log("GAME OVER");
         gameOverText.enabled = true;
         Invoke("Restart", restartDelay);
     }
