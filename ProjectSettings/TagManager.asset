@@ -15,6 +15,7 @@ TagManager:
   - Jean Paul
   - AmmoCrate
   - ChangeBackgroundBar
+  - WinTrigger
   layers:
   - Default
   - TransparentFX

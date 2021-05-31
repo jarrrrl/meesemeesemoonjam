@@ -12,6 +12,5 @@ public class JeanPaulEnemy : Enemy
         Destroy(gameObject);
         regionBelongTo.numEnemies--;
         regionBelongTo.AreEnemiesLeft();
-        //after 1st boss cutscene here
     }
 }

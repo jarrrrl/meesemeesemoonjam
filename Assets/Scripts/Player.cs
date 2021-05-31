@@ -105,6 +105,11 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<ChangeBackgroundBar>().ChangeBackground();
         }
+        if (collider.gameObject.CompareTag("WinTrigger"))
+        {
+            FindObjectOfType<GameManager>().GameWin();
+
+        }
     }
 
 

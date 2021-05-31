@@ -138,6 +138,8 @@ GameObject:
   - component: {fileID: 4743035911269665446}
   - component: {fileID: 9210125490053365281}
   - component: {fileID: 5997821668115909497}
+  - component: {fileID: 6447638466441220669}
+  - component: {fileID: 1435568550403998320}
   m_Layer: 0
   m_Name: Jean Paul Boss
   m_TagString: Jean Paul
@@ -331,6 +333,40 @@ MonoBehaviour:
   batonHitEffect: {fileID: 3045438682063430384, guid: 3edb8a51f3a707c43b4eeda9cce16fd7, type: 3}
   moveSpeed: 10
   maxHealth: 10
+--- !u!111 &6447638466441220669
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720592630395046324}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1435568550403998320
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720592630395046324}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7324285358752742776
 GameObject:
   m_ObjectHideFlags: 0

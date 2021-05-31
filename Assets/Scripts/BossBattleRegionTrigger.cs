@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossBattleRegionTrigger : BattleRegionTrigger
 {
@@ -19,6 +20,10 @@ public class BossBattleRegionTrigger : BattleRegionTrigger
     {
         if (collision.gameObject.CompareTag("Player") && hasTriggered == false)
         {
+            DialogBoxController dialog = FindObjectOfType<DialogBoxController>();
+            dialog.dialogText.text = "";
+            dialog.DisableBox();
+
             gameCameraController.SwitchPriority();
             AudioManager.instance.StopPlaying("CityTheme");
             AudioManager.instance.StopPlaying("PlaneswalkerTheme");
