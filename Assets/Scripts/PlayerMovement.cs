@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public bool hasStopped = true;
 
     private float playerMoveSpeed = Player.MoveSpeed;
 

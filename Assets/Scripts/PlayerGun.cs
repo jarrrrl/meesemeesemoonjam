@@ -17,11 +17,13 @@ public class PlayerGun : Gun
         {
             ammoCount--;
             gunObject.SetActive(true);
+            AudioManager.instance.Play("gunShotSound");
             StartCoroutine(GunUseTimer());
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
         else
         {
+            AudioManager.instance.Play("noAmmoSound");
             //out of ammo
             return;
         }

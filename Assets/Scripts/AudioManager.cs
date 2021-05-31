@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
+            Debug.LogWarning("not found");
             return;
         }
         s.source.Play();
@@ -51,8 +52,10 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
-    private void Start()
+    void Start()
     {
+        StopPlaying("bossTheme");
+        StopPlaying("PlaneswalkerTheme");
         Play("CityTheme");
     }
 }

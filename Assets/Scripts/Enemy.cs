@@ -15,11 +15,6 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 3;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamageBaton()
     {
+        AudioManager.instance.Play("batonHitSound");
         maxHealth--;
         if(maxHealth <= 0)
         {
@@ -39,6 +35,7 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamageGun()
     {
+        AudioManager.instance.Play("meatHitSound");
         maxHealth -= 3;
         if(maxHealth <= 0)
         {
@@ -47,7 +44,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void KillEnemy()
     {
-        
+        AudioManager.instance.Play("oofLowerPitch");
         Destroy(gameObject);
         regionBelongTo.numEnemies--;
         regionBelongTo.AreEnemiesLeft();

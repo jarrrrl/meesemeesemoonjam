@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+
     // ** sprites
     public Sprite idleSprite;
     public Sprite gunSprite;
@@ -73,19 +75,23 @@ public class Player : MonoBehaviour
         if (collider.gameObject.CompareTag("EnemyHand") && 
             playerShield.playerShielded.Equals(false))
         {
+            AudioManager.instance.Play("meatHitSound");
             GameObject hitEffectInstance = Instantiate(hitEffect, 
                 transform.position, Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
+            AudioManager.instance.Play("deathSound");
             FindObjectOfType<GameManager>().EndGame();
 
         }
         if (collider.gameObject.CompareTag("EnemyBullet") &&
             playerShield.playerShielded.Equals(false))
         {
+            AudioManager.instance.Play("meatHitSound");
             GameObject hitEffectInstance = Instantiate(hitEffect, 
                 transform.position, Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             Destroy(collider.gameObject);
+            AudioManager.instance.Play("deathSound");
             FindObjectOfType<GameManager>().EndGame();
 
         }

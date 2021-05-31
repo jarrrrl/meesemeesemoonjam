@@ -59,6 +59,8 @@ public class FinalBossController : XQCController
         enemyObject.GetComponent<SpriteRenderer>().sprite = idleSprite;
 
         maldingSign.GetComponent<SpriteRenderer>().enabled = false;
+        AudioManager.instance.Play("finalBossLaughSound");
+
         canFire = true;
         enemyObject.moveSpeed += 2f;
     }

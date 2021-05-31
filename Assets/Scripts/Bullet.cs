@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
                 GetComponent<Collider2D>());
             return;
         }
-
+        AudioManager.instance.Play("blockSound");
         Destroy(gameObject);
     }
 

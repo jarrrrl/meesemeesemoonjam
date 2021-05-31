@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+
+
     public Transform firePoint; //where the bullet is fired from
     public GameObject bulletPrefab;
     public GameObject gunObject;
@@ -22,6 +24,7 @@ public class Gun : MonoBehaviour
     {
  
         gunObject.SetActive(true);
+        AudioManager.instance.Play("gunShotSound");
         StartCoroutine(GunUseTimer());
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }

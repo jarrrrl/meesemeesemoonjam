@@ -17,7 +17,7 @@ public class NoseGun : Gun
     }
     public override void ShootGun()
     {
-
+        AudioManager.instance.Play("laserGunSound");
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
