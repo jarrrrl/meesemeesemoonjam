@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     public Sprite idleSprite;
     public Sprite gunSprite;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Enemy enemyObject;
 
     public enum EnemyState
@@ -118,7 +118,7 @@ public class EnemyController : MonoBehaviour
         GunAttack();
         PunchAttack();
     }
-    private void Rotate(Vector2 direction)
+    protected virtual void Rotate(Vector2 direction)
     {
         if (direction.x > 0)
         {

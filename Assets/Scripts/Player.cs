@@ -82,6 +82,11 @@ public class Player : MonoBehaviour
             Destroy(collider.gameObject);
             //die
         }
+        if (collider.gameObject.CompareTag("AmmoCrate"))
+        {
+            playerGun.ammoCount += 4;
+            Destroy(collider.gameObject);
+        }
     }
 
 

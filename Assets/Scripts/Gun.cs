@@ -7,7 +7,6 @@ public class Gun : MonoBehaviour
     public Transform firePoint; //where the bullet is fired from
     public GameObject bulletPrefab;
     public GameObject gunObject;
-    public int ammoCount;
     public float fireSpeed = 6f;
     public float gunDamage = 3f;
     public float gunUseTimer = 5f;
@@ -19,11 +18,12 @@ public class Gun : MonoBehaviour
      * Fires gun from the fire point which is the barrel of the gun
      */
 
-    public void ShootGun()
+    public virtual void ShootGun()
     {
-        gunObject.SetActive(true);
-        StartCoroutine(GunUseTimer());
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+ 
+            gunObject.SetActive(true);
+            StartCoroutine(GunUseTimer());
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
     private IEnumerator GunUseTimer()
     {

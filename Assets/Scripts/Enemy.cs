@@ -12,24 +12,12 @@ public class Enemy : MonoBehaviour
     public GameObject hitEffect;
 
     public float moveSpeed = 5f;
-    private static float maxHealth = 3;
-    private static float currenthealth;
-    public static float MaxHealth
-    {
-        get => maxHealth;
-        set => maxHealth = value;
-    }
-    public static float CurrentHealth
-    {
-        get => currenthealth;
-        set => currenthealth = value;
-    }
+    public float maxHealth = 3;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -51,7 +39,7 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamageGun()
     {
-        maxHealth = maxHealth - 3;
+        maxHealth -= 3;
         if(maxHealth <= 0)
         {
             KillEnemy();

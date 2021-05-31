@@ -29,6 +29,7 @@ public class BattleRegion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //battle area activate - set enemies to active state and lock camera and
         //activate boundaries for area
         if (locationTrigger.hasTriggered && numEnemies > 0)
@@ -47,9 +48,9 @@ public class BattleRegion : MonoBehaviour
             gameCameraController.SwitchPriority();
 
             //move locked camera and boundary box to the right
-            regionCameraTransform.Translate(50, 0, 0);
+            regionCameraTransform.Translate(80, 0, 0);
 
-            battleRegionCameraArea.transform.Translate(50, 0, 0);
+            battleRegionCameraArea.transform.Translate(80, 0, 0);
         }
     }
 

@@ -12,6 +12,8 @@ TagManager:
   - EnemyBullet
   - PlayerBaton
   - EnemyHand
+  - Jean Paul
+  - AmmoCrate
   layers:
   - Default
   - TransparentFX
