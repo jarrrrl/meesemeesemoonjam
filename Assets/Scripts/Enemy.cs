@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     public GameObject playerBoundsBottom;
     public GameObject hitEffect;
     public GameObject batonHitEffect;
-    public Animator animator;
 
     public float moveSpeed = 5f;
     public float maxHealth = 3;
