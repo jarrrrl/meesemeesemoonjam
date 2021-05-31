@@ -3670,31 +3670,37 @@ MonoBehaviour:
     pitch: 1
     name: deathSound
     source: {fileID: 0}
-    loop: 1
+    loop: 0
   - clip: {fileID: 8300000, guid: cc9c3806dd11c0c4f9d8964da5d28999, type: 3}
     volume: 0.5
     pitch: 1
     name: blockSound
     source: {fileID: 0}
-    loop: 1
-  - clip: {fileID: 8300000, guid: cc9c3806dd11c0c4f9d8964da5d28999, type: 3}
+    loop: 0
+  - clip: {fileID: 8300000, guid: 583683a8bd7190a49b3979b8f3e2f799, type: 3}
     volume: 0.5
     pitch: 1
-    name: blockSound
+    name: noAmmoSound
     source: {fileID: 0}
-    loop: 1
-  - clip: {fileID: 8300000, guid: cc9c3806dd11c0c4f9d8964da5d28999, type: 3}
+    loop: 0
+  - clip: {fileID: 8300000, guid: 4736b4de3776f44449187c0accaa06cd, type: 3}
     volume: 0.5
     pitch: 1
-    name: blockSound
+    name: gunShotSound
     source: {fileID: 0}
-    loop: 1
-  - clip: {fileID: 8300000, guid: cc9c3806dd11c0c4f9d8964da5d28999, type: 3}
+    loop: 0
+  - clip: {fileID: 8300000, guid: b898258cadd48234ab9ea7cc72d5812f, type: 3}
     volume: 0.5
     pitch: 1
-    name: blockSound
+    name: batonHitSound
     source: {fileID: 0}
     loop: 1
+  - clip: {fileID: 8300000, guid: 7bc28887f7c11dd448dc0f73a5608fcc, type: 3}
+    volume: 0.5
+    pitch: 1
+    name: finalBossLaughSound
+    source: {fileID: 0}
+    loop: 0
 --- !u!4 &1006215706
 Transform:
   m_ObjectHideFlags: 0
