@@ -760,7 +760,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175945546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 219.9, y: -12.29, z: 0}
+  m_LocalPosition: {x: 219.7, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}
@@ -947,12 +947,12 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.8
-  m_DeadZoneHeight: 0.1
+  m_DeadZoneWidth: 0.4
+  m_DeadZoneHeight: 0.4
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.2
+  m_SoftZoneWidth: 0.4
+  m_SoftZoneHeight: 0.4
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -1753,7 +1753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: -10}
+  m_LocalPosition: {x: -70, y: 0.0000009536743, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1814,12 +1814,12 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.8
-  m_DeadZoneHeight: 0.85
+  m_DeadZoneWidth: 0.4
+  m_DeadZoneHeight: 0.4
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.85
+  m_SoftZoneWidth: 0.4
+  m_SoftZoneHeight: 0.4
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -2968,7 +2968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842756848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 499.8, y: -12.29, z: 0}
+  m_LocalPosition: {x: 499.2, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}
@@ -3524,7 +3524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967487549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.3, y: -12.29, z: 0}
+  m_LocalPosition: {x: 33.25, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}
@@ -3555,7 +3555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995532461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 126.6, y: -12.29, z: 0}
+  m_LocalPosition: {x: 126.5, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}
@@ -4293,7 +4293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167736066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 406.5, y: -12.29, z: 0}
+  m_LocalPosition: {x: 406, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}
@@ -5717,7 +5717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482210476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: -10}
+  m_LocalPosition: {x: -70, y: 0.0000009536743, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 201172147}
@@ -7617,7 +7617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993640577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 313.2, y: -12.29, z: 0}
+  m_LocalPosition: {x: 312.9, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}
@@ -8052,7 +8052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053058391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: -10}
+  m_LocalPosition: {x: -70, y: 0.0000009536743, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 582414696}
@@ -8277,7 +8277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109584790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 593.1, y: -12.29, z: 0}
+  m_LocalPosition: {x: 592.4, y: -12.29, z: 0}
   m_LocalScale: {x: 2.65, y: 2.65, z: 3}
   m_Children: []
   m_Father: {fileID: 2105357426}

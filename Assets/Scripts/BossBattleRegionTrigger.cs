@@ -19,11 +19,11 @@ public class BossBattleRegionTrigger : BattleRegionTrigger
     {
         if (collision.gameObject.CompareTag("Player") && hasTriggered == false)
         {
+            gameCameraController.SwitchPriority();
             AudioManager.instance.StopPlaying("CityTheme");
             AudioManager.instance.StopPlaying("PlaneswalkerTheme");
             AudioManager.instance.Play("BossTheme");
             hasTriggered = true;
-            gameCameraController.SwitchPriority();
 
         }
 

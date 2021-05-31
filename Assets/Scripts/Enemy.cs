@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public GameObject playerBoundsTop;
     public GameObject playerBoundsBottom;
     public GameObject hitEffect;
+    public GameObject batonHitEffect;
 
     public float moveSpeed = 5f;
     public float maxHealth = 3;
@@ -64,7 +65,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerBaton"))
         {
             TakeDamageBaton();
-            GameObject hitEffectInstance = Instantiate(hitEffect, transform.position,
+            GameObject hitEffectInstance = Instantiate(batonHitEffect, transform.position,
             Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             return;

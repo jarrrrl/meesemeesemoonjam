@@ -328,6 +328,7 @@ MonoBehaviour:
   playerBoundsTop: {fileID: 0}
   playerBoundsBottom: {fileID: 0}
   hitEffect: {fileID: 4318046876585605126, guid: a204b5b72377313418e5734171f0e7eb, type: 3}
+  batonHitEffect: {fileID: 3045438682063430384, guid: 3edb8a51f3a707c43b4eeda9cce16fd7, type: 3}
   moveSpeed: 10
   maxHealth: 10
 --- !u!1 &7324285358752742776

@@ -23,8 +23,9 @@ public class BattleRegionTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && hasTriggered == false)
         {
-            hasTriggered = true;
             gameCameraController.SwitchPriority();
+            hasTriggered = true;
+
 
         }
 
