@@ -61,11 +61,25 @@ public class EnemyController : MonoBehaviour
             enemyObject.transform.position;
         direction.Normalize();
         Rotate(direction);
+        LayerSprite();
         
         if (Vector2.Distance(playerObject.transform.position, transform.position) > 5f){
             movement = direction;
         }
 
+    }
+    void LayerSprite()
+    {
+        if(direction.y >= 0f)
+        {
+            enemyObject.GetComponent<SpriteRenderer>().sortingOrder =
+                playerObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
+        }
+        else
+        {
+            enemyObject.GetComponent<SpriteRenderer>().sortingOrder =
+                playerObject.GetComponent<SpriteRenderer>().sortingOrder - 1;
+        }
     }
     void MoveCharacter(Vector2 direction)
     {

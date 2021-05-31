@@ -47,9 +47,10 @@ public class Enemy : MonoBehaviour
     }
     public virtual void KillEnemy()
     {
+        
+        Destroy(gameObject);
         regionBelongTo.numEnemies--;
         regionBelongTo.AreEnemiesLeft();
-        Destroy(gameObject);
         //maybe switch to enemy on ground before destroyed?
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,10 +72,6 @@ public class Enemy : MonoBehaviour
             Destroy(hitEffectInstance, 2f);
             return;
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
 
 }

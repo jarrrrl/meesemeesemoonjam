@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class XQCController : EnemyController
 {
+    public GameObject maldingSign;
+    public float maldingSignTimer = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,19 @@ public class XQCController : EnemyController
             enemyObject.transform.eulerAngles = Vector3.up * 180;
 
         }
+    }
+    public override void GunAttack()
+    {
+        maldingSign.GetComponent<SpriteRenderer>().enabled = true;
+        base.GunAttack();
+        StartCoroutine(MaldingSignTimer());
+
+    }
+    private IEnumerator MaldingSignTimer()
+    {
+        yield return new WaitForSeconds(maldingSignTimer);
+
+        maldingSign.GetComponent<SpriteRenderer>().enabled = false;
+
     }
 }

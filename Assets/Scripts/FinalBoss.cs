@@ -17,7 +17,7 @@ public class FinalBoss : Enemy
     }
     public override void KillEnemy()
     {
-        this.KillEnemy();
+        base.KillEnemy();
         //play final cutscene
     }
 }

@@ -24,6 +24,7 @@ public class FinalBossController : XQCController
         if (direction.y <= 0.2f && direction.y >= -0.2f && canFire
             && (Vector2.Distance(playerObject.transform.position, transform.position) > 6f))
         {
+            maldingSign.GetComponent<SpriteRenderer>().enabled = true;
             enemyObject.moveSpeed -= 2f;
             if (numEyeLasers < 3) {
                 enemyObject.GetComponent<SpriteRenderer>().sprite = gunSprite;
@@ -38,7 +39,7 @@ public class FinalBossController : XQCController
 
                 numEyeLasers = 0;
             }
-
+            StartCoroutine(MaldingSignTimer());
             StartCoroutine(FireSpeedTimer());
         }
     }
@@ -55,5 +56,12 @@ public class FinalBossController : XQCController
 
         canFire = true;
         enemyObject.moveSpeed += 2f;
+    }
+    private IEnumerator MaldingSignTimer()
+    {
+        yield return new WaitForSeconds(maldingSignTimer);
+
+        maldingSign.GetComponent<SpriteRenderer>().enabled = false;
+
     }
 }
