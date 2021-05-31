@@ -1,7 +1,9 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
-
+/**
+ * adopted from Brackeys' tutorial on audio management
+ */
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
