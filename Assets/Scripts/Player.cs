@@ -76,7 +76,8 @@ public class Player : MonoBehaviour
             GameObject hitEffectInstance = Instantiate(hitEffect, 
                 transform.position, Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
-            //die
+            FindObjectOfType<GameManager>().EndGame();
+
         }
         if (collider.gameObject.CompareTag("EnemyBullet") &&
             playerShield.playerShielded.Equals(false))
@@ -85,7 +86,8 @@ public class Player : MonoBehaviour
                 transform.position, Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             Destroy(collider.gameObject);
-            //die
+            FindObjectOfType<GameManager>().EndGame();
+
         }
         if (collider.gameObject.CompareTag("AmmoCrate"))
         {
