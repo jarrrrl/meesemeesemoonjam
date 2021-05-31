@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public Sprite gunSprite;
     public Sprite normalSprite;
     public GameObject hitEffect;
+    public GameObject punchHitEffect;
 
     //
 
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
             playerShield.playerShielded.Equals(false))
         {
             AudioManager.instance.Play("meatHitSound");
-            GameObject hitEffectInstance = Instantiate(hitEffect, 
+            GameObject hitEffectInstance = Instantiate(punchHitEffect, 
                 transform.position, Quaternion.identity);
             Destroy(hitEffectInstance, 2f);
             AudioManager.instance.Play("deathSound");

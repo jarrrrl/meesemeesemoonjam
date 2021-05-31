@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     }
     void Restart()
     {
+        AudioManager.instance.StopPlaying("BossTheme");
+        AudioManager.instance.StopPlaying("PlaneswalkerTheme");
+        AudioManager.instance.StopPlaying("CityTheme");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -54,8 +54,6 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        StopPlaying("bossTheme");
-        StopPlaying("PlaneswalkerTheme");
         Play("CityTheme");
     }
 }

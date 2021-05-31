@@ -119,11 +119,12 @@ MonoBehaviour:
   idleSprite: {fileID: 21300000, guid: 5975e31449c85c24dbc0c9a1dfb1be62, type: 3}
   gunSprite: {fileID: 21300000, guid: b226fb165c0c6ab41b785bb404b55e50, type: 3}
   rb: {fileID: -9025170610291289586}
-  enemyObject: {fileID: 3777337255418276277}
+  enemyObject: {fileID: 0}
   currentState: 0
   playerObject: {fileID: 0}
   enemyRegion: {fileID: 0}
   direction: {x: 0, y: 0}
+  maldingSign: {fileID: 0}
 --- !u!1 &5720592630395046324
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ GameObject:
   - component: {fileID: -9025170610291289586}
   - component: {fileID: 4743035911269665446}
   - component: {fileID: 9210125490053365281}
-  - component: {fileID: 3777337255418276277}
+  - component: {fileID: 5997821668115909497}
   m_Layer: 0
   m_Name: Jean Paul Boss
   m_TagString: Jean Paul
@@ -311,7 +312,7 @@ PolygonCollider2D:
       - {x: 1.095, y: -3.6299999}
       - {x: 1.095, y: -3.72}
       - {x: 1.005, y: -3.72}
---- !u!114 &3777337255418276277
+--- !u!114 &5997821668115909497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,7 +321,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5720592630395046324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f83c78426657648b29ee37879f3129, type: 3}
+  m_Script: {fileID: 11500000, guid: e4a011a2b217df94799a28af3c5ad3f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   regionBelongTo: {fileID: 0}
@@ -328,7 +329,7 @@ MonoBehaviour:
   playerBoundsBottom: {fileID: 0}
   hitEffect: {fileID: 4318046876585605126, guid: a204b5b72377313418e5734171f0e7eb, type: 3}
   moveSpeed: 10
-  maxHealth: 3
+  maxHealth: 10
 --- !u!1 &7324285358752742776
 GameObject:
   m_ObjectHideFlags: 0

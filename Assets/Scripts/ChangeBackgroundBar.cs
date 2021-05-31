@@ -7,10 +7,16 @@ public class ChangeBackgroundBar : MonoBehaviour
 {
     public Image evilBackground;
     public Image goodBackground;
+    public bool backgroundChanged = false;
     // Start is called before the first frame update
     public void ChangeBackground()
     {
-        goodBackground.enabled = false;
-        evilBackground.enabled = true;
+        if (backgroundChanged == false)
+        {
+            goodBackground.enabled = false;
+            evilBackground.enabled = true;
+            AudioManager.instance.StopPlaying("CityTheme");
+            AudioManager.instance.Play("PlaneswalkerTheme");
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public float bulletVelocity = 20f;
+    public float bulletVelocity = 10f;
 
 
     public Rigidbody2D rb; //2d collider box physics container

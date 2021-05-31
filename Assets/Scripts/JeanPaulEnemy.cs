@@ -7,11 +7,11 @@ public class JeanPaulEnemy : Enemy
     public override void KillEnemy()
     {
         AudioManager.instance.Play("oofLowerPitch");
-        AudioManager.instance.StopPlaying("bossTheme");
-        AudioManager.instance.Play("cityTheme");
+        AudioManager.instance.StopPlaying("BossTheme");
+        AudioManager.instance.Play("CityTheme");
         Destroy(gameObject);
         regionBelongTo.numEnemies--;
         regionBelongTo.AreEnemiesLeft();
-        //maybe switch to enemy on ground before destroyed?
+        //after 1st boss cutscene here
     }
 }
