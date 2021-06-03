@@ -44,7 +44,7 @@ public class FinalBossController : XQCController
     }
     public override void PunchAttack()
     {
-     //can't punch attack
+     return;
     }
     public override void MoveCharacter(Vector2 direction)
     {

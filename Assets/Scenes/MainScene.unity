@@ -4006,12 +4006,6 @@ MonoBehaviour:
     name: BossTheme
     source: {fileID: 0}
     loop: 1
-  - clip: {fileID: 8300000, guid: fbfda72b952d34f4da22f28520473005, type: 3}
-    volume: 0.2
-    pitch: 1
-    name: walkingSound
-    source: {fileID: 0}
-    loop: 0
   - clip: {fileID: 8300000, guid: 1fa27263b5a034e4c961f2756c5de04b, type: 3}
     volume: 0.3
     pitch: 1
@@ -4176,7 +4170,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1026413455
 RectTransform:
@@ -7704,7 +7698,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4606bcb21654e6d4fa75371a883af459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9030,6 +9024,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4244409225667846836, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 2091770950}
+    - target: {fileID: 4244409225667846836, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
       propertyPath: enemyRegion
       value: 
       objectReference: {fileID: 2273550340028382769}
@@ -9041,10 +9039,6 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 2113478676}
-    - target: {fileID: 4244409225667846836, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
-      propertyPath: maldingSignTimer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7058045311032919719, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -9069,7 +9063,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalBoss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8587692545098579474, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
 --- !u!4 &2091770947 stripped
 Transform:
@@ -9081,6 +9076,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 376414625389788970, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
   m_PrefabInstance: {fileID: 2091770946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2091770949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8754577437008697729, guid: 71a24915f4bad7748bfad1715058b249, type: 3}
+  m_PrefabInstance: {fileID: 2091770946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2091770950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091770949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2488e47ecafc4ce43b29c0c79ce63ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionBelongTo: {fileID: 2273550340028382769}
+  playerBoundsTop: {fileID: 1746844541}
+  playerBoundsBottom: {fileID: 298930652}
+  hitEffect: {fileID: 4318046876585605126, guid: a204b5b72377313418e5734171f0e7eb, type: 3}
+  batonHitEffect: {fileID: 3045438682063430384, guid: 3edb8a51f3a707c43b4eeda9cce16fd7, type: 3}
+  moveSpeed: 5
+  maxHealth: 3
 --- !u!1 &2105357425
 GameObject:
   m_ObjectHideFlags: 0

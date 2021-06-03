@@ -237,7 +237,7 @@ MonoBehaviour:
   idleSprite: {fileID: 21300000, guid: 7fad982816e4e284da50b94fd6b698eb, type: 3}
   gunSprite: {fileID: 21300000, guid: 7fad982816e4e284da50b94fd6b698eb, type: 3}
   rb: {fileID: 4539923476785984440}
-  enemyObject: {fileID: 8587692545098579474}
+  enemyObject: {fileID: 0}
   currentState: 0
   playerObject: {fileID: 0}
   enemyRegion: {fileID: 0}
@@ -603,7 +603,6 @@ MonoBehaviour:
   playerBoundsBottom: {fileID: 0}
   hitEffect: {fileID: 0}
   batonHitEffect: {fileID: 3045438682063430384, guid: 3edb8a51f3a707c43b4eeda9cce16fd7, type: 3}
-  animator: {fileID: 0}
   moveSpeed: 5
   maxHealth: 20
 --- !u!95 &6382187735363069723

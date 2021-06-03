@@ -21,14 +21,18 @@ public class BossBattleRegionTrigger : BattleRegionTrigger
         if (collision.gameObject.CompareTag("Player") && hasTriggered == false)
         {
             DialogBoxController dialog = FindObjectOfType<DialogBoxController>();
-            dialog.dialogText.text = "";
-            dialog.DisableBox();
+            if (dialog)
+            {
+                dialog.dialogText.text = "";
+                dialog.DisableBox();
+            }
 
             gameCameraController.SwitchPriority();
             AudioManager.instance.StopPlaying("CityTheme");
             AudioManager.instance.StopPlaying("PlaneswalkerTheme");
             AudioManager.instance.Play("BossTheme");
             hasTriggered = true;
+            Debug.Log(hasTriggered);
 
         }
 

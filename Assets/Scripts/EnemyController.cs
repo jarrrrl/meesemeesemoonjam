@@ -92,6 +92,7 @@ public class EnemyController : MonoBehaviour
         if(Vector2.Distance(playerObject.transform.position, transform.position) < 20f &&
             enemyRegion.locationTrigger.hasTriggered == true)
         {
+            Debug.Log("Enemy" + this.gameObject + "has been activated");
             currentState = EnemyState.active;
         }
     }
